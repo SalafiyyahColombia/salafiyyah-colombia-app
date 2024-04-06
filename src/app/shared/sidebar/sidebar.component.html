@@ -5,6 +5,7 @@
         *ngFor="let link of navLinks"
         role="listitem"
         [routerLink]="link.url"
+        (click)="drawer.close()"
       >
         {{link.text}}
       </mat-list-item>
