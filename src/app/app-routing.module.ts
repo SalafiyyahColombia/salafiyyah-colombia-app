@@ -21,7 +21,7 @@ const routes: Routes = [
       {path: 'topic-index', component: TopicIndexComponent},
       {path: 'contact-us', component: ContactUsComponent},
       {path: 'about-us', component: AboutUsComponent},
-      {path: '', pathMatch: 'full', redirectTo: '/dashboard'},
+      {path: '', pathMatch: 'full', redirectTo: '/topic-index'},
     ]
   },
 
