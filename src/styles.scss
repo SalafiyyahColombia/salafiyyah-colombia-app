@@ -2,6 +2,102 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
-
+* {
+  outline: none;
+  unicode-bidi: isolate;
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@mixin cursor($cursor-type) {
+  // Define cursor styles based on the provided cursor type
+  @if $cursor-type == pointer {
+    cursor: pointer;
+  } @else if $cursor-type == default {
+    cursor: default;
+  } @else if $cursor-type == text {
+    cursor: text;
+  } @else if $cursor-type == crosshair {
+    cursor: crosshair;
+  } @else if $cursor-type == wait {
+    cursor: wait;
+  } @else if $cursor-type == help {
+    cursor: help;
+  } @else if $cursor-type == move {
+    cursor: move;
+  } @else if $cursor-type == not-allowed {
+    cursor: not-allowed;
+  } @else {
+    // Default to pointer if an invalid cursor type is provided
+    cursor: pointer;
+  }
+}
+
+// Usage example:
+.cursor-pointer {
+  @include cursor(pointer);
+}
+
+.cursor-default {
+  @include cursor(default);
+}
+
+.cursor-text {
+  @include cursor(text);
+}
+
+.cursor-crosshair {
+  @include cursor(crosshair);
+}
+
+.cursor-wait {
+  @include cursor(wait);
+}
+
+.cursor-help {
+  @include cursor(help);
+}
+
+.cursor-move {
+  @include cursor(move);
+}
+
+.cursor-not-allowed {
+  @include cursor(not-allowed);
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.sidebar {
+  display: grid;
+  height: 100%;
+
+  .drawer-main {
+    width: 200px;
+  }
+
+  .mat-drawer-content {
+    width: 100%;
+  }
+
+  .mat-drawer-inner-container {
+    .mat-mdc-list {
+      .mdc-list-item__content {
+        cursor: pointer;
+        .mdc-list-item__primary-text {
+          color: dodgerblue;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}

@@ -11,8 +11,16 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { ThrustableSourcesComponent } from './pages/thrustable-sources/thrustable-sources.component';
+import { TrustableSourcesComponent } from './pages/thrustable-sources/thrustable-sources.component';
 import { TopicIndexComponent } from './pages/topic-index/topic-index.component';
+import { PagesComponent } from './pages/pages/pages.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import {AngularMaterialModule} from "./shared/modules/angular-material.module";
+import {RouterModule} from "@angular/router";
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +29,14 @@ import { TopicIndexComponent } from './pages/topic-index/topic-index.component';
     SignupComponent,
     DashboardComponent,
     PageNotFoundComponent,
-    ThrustableSourcesComponent,
-    TopicIndexComponent
+    TrustableSourcesComponent,
+    TopicIndexComponent,
+    PagesComponent,
+    HeaderComponent,
+    FooterComponent,
+    SidebarComponent,
+    ContactUsComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +44,8 @@ import { TopicIndexComponent } from './pages/topic-index/topic-index.component';
     NgbModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    AngularMaterialModule,
+    RouterModule,
     TranslateModule.forRoot()
   ],
   providers: [],

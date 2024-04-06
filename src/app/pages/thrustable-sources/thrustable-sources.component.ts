@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './thrustable-sources.component.html',
   styleUrls: ['./thrustable-sources.component.scss']
 })
-export class ThrustableSourcesComponent {
+export class TrustableSourcesComponent {
 
 }
