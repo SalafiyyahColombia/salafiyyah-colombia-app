@@ -15,7 +15,7 @@ export class TopicIndexComponent {
     'Creencia',
     'Metodología',
     'Corán',
-    'Hadiz',
+    'Hadith',
     'Adoración',
     'Búsqueda del conocimiento',
     'Suavizantes del corazón',
@@ -46,6 +46,12 @@ export class TopicIndexComponent {
         url: 'https://salafiyyahcolombia.blogspot.com/2024/03/kitab-at-tawhid-de-mohammed-bin-andul-wahhab-con-la-explicacio-de-sheikh-an-najmi-parte-00-introduccion.html',
         description: 'Esta es una explicación del Kitab at-Tawhid (El Libro de la Unicidad de Allah) por Sheikh ul-Islam Muhammad bin Abdul-Wahhab (fallecido en el año 1206 de la Hégira, que Allah tenga misericordia de él). La explicación fue escrita por Ash-Sheikh Al-Allamah Ahmad bin Yahya An-Najmi (que Allah tenga misericordia de él) y adaptada por Abu Khadijah Abdul-Wahid Alam.',
         category: 'creencia',
+      },
+      {
+        title: 'Esta Ummah se dividirá en 73 sectas',
+        url: 'https://salafiyyahcolombia.blogspot.com/2024/03/kitab-at-tawhid-de-mohammed-bin-andul-wahhab-con-la-explicacio-de-sheikh-an-najmi-parte-00-introduccion.html',
+        description: 'Imam al-Barbaharī (que Allah tenga misericordia de él, fallecido en el 329 AH) afirmó: "Sabe que el Mensajero de Allah (que la paz y las bendiciones de Allah sean con él) dijo: Mi Ummah se dividirá en 73 sectas, todas ellas estarán en el Fuego excepto una, y esa es la Jama\'ah\'. Se le preguntó: ¿Y quiénes son ellos, oh Mensajero de Allah? Él (que la paz y las bendiciones de Allah sean con él) respondió: Lo que yo y mis Compañeros seguimos hoy en día."',
+        category: 'hadith',
       }
     ]
     this.filteredTopics = [...this.topics];
