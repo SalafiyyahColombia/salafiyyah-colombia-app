@@ -21,6 +21,7 @@ import {AngularMaterialModule} from "./shared/modules/angular-material.module";
 import {RouterModule} from "@angular/router";
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
     ReactiveFormsModule,
     AngularMaterialModule,
     RouterModule,
-    TranslateModule.forRoot()
+    TranslateModule.forRoot(),
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

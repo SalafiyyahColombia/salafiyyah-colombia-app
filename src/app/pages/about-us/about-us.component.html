@@ -1,10 +1,30 @@
 <div class="row">
-  <div class="col-12">
-    <div class="container">
-      <img src="./assets/images/under-construction.png" alt="Construction Logo" class="logo" style="width: 600px">
-      <h1 class="heading">Sitio en construcción</h1>
-      <p class="message">Lo sentimos en este momento esta pagina esta siendo desarrollada.</p>
-      <p class="contact-info">Para quejas por favor contactarnos en: <a href="mailto:salafiyyahColombia@gmail.com">salafiyyahColombia@gmail.com</a>.</p>
+  <div class="col-6 mb-5 text-center">
+    <img class="logo mt-5" src="./assets/images/logo-white.jpg" alt="logo-white">
+  </div>
+  <div class="col-6 d-flex flex-column justify-content-center align-items-center ">
+    <h1 class="title ">
+      <b>
+        Salafiyyah Colombia
+      </b>
+    </h1>
+    <p>
+      Nuestra organización fue fundada en enero de 2024 con la intención de hacer dawah tanto a no musulmanes como a
+      musulmanes por medio del corán y la sunnah con el entendimiento de las 3 generaciones favoritas.
+    </p>
+    <div class="row">
+      <div class="col-12">
+        <ul class="list-group list-group-horizontal mt-5">
+          <li
+            class="list-group-item cursor-pointer fs-6"
+            [ngClass]="item.style"
+            *ngFor="let item of socialMediaItems"
+            (click)="onSocialMedialClick(item.url)"
+          >
+            <fa-icon [icon]="item.icon"></fa-icon>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
