@@ -2,5 +2,5 @@ export interface TopicInterface {
   title: string;
   description: string;
   url: string;
-  category: string;
+  categories: string[];
 }
