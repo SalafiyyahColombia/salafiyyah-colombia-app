@@ -1,8 +1,9 @@
 .mat-mdc-card {
   height: 100%;
+  flex-grow: 1;
 
   .mat-mdc-card-actions {
-    display: flex;
+    margin-top: auto;
     .card-button {
       width: 100%;
     }
