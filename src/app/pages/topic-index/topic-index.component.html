@@ -11,7 +11,7 @@
     </mat-chip-listbox>
   </div>
   <div class="col-sm-12 col-md-12 col-lg-4 p-3" *ngFor="let topic of filteredTopics">
-    <mat-card class="card cursor-pointer" (click)="onCardClick(topic.url)">
+    <mat-card class="card">
       <mat-card-header>
         <mat-card-title>{{ topic.title }}</mat-card-title>
       </mat-card-header>
@@ -27,6 +27,16 @@
           </mat-chip-option>
         </mat-chip-listbox>
       </mat-card-content>
+      <mat-card-actions>
+        <button
+          type="button"
+          (click)="onCardClick(topic.url)"
+          mat-button
+          class="bg-success text-white card-button"
+        >
+          Ir a la publicación
+        </button>
+      </mat-card-actions>
     </mat-card>
   </div>
 </div>

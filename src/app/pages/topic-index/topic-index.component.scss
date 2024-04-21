@@ -1,3 +1,11 @@
 .mat-mdc-card {
   height: 100%;
+
+  .mat-mdc-card-actions {
+    display: flex;
+    .card-button {
+      width: 100%;
+    }
+  }
+
 }
