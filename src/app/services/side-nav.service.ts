@@ -8,7 +8,6 @@ export class SideNavService {
   private drawer!: MatDrawer;
 
   setSidenav(drawer: MatDrawer): void {
-    console.log(this.drawer)
     this.drawer = drawer;
   }
 

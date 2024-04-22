@@ -213,7 +213,6 @@ export class TopicIndexComponent {
   }
 
   onChipClick(chipSelection: MatChipSelectionChange): void {
-    console.log(chipSelection)
     if (chipSelection.selected) {
       this.filteredTopics = this.topics.filter(topic => topic.categories.includes(chipSelection.source.value));
     } else {
