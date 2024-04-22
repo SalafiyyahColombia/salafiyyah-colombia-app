@@ -8,8 +8,8 @@
           <mat-card-header class="justify-content-center">
             <mat-card-title class="fs-4">{{item.socialMediaName}}</mat-card-title>
           </mat-card-header>
-          <fa-icon size="3x" [class]="item.style" [icon]="item.icon"></fa-icon>
-          <mat-card-actions>
+          <fa-icon size="4x" [class]="item.style" [icon]="item.icon"></fa-icon>
+          <mat-card-actions class="">
             <button mat-button class="card-button bg-success text-white" type="button" (click)="onSocialMedialClick(item.url)">Ir ahora!</button>
           </mat-card-actions>
         </mat-card>
