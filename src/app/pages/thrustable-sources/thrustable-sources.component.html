@@ -1,10 +1,37 @@
 <div class="row">
   <div class="col-12">
-    <div class="container text-center">
-      <h1 class="fs-1 mt-5">Sitio en construcción</h1>
-      <p class="message fs-3">Lo sentimos en este momento esta pagina esta siendo desarrollada.</p>
-      <p class="contact-info fs-5">Para suferencias por favor contactarnos en: <a href="mailto:salafiyyahColombia@gmail.com">salafiyyahColombia@gmail.com</a>.</p>
-      <img src="./assets/images/under-construction.png" alt="Construction Logo" class="img-fluid ">
+    <h1 class="fs-1 mt-5 text-center">Lista de canales fiables de la da’wah Salafiyyah en español</h1>
+    <div class="container">
+      <div class="social-media-list" *ngFor="let socialItem of trustableSites">
+        <h3 class="fs-3 mt-5">
+          <b>
+            {{socialItem.socialMediaName}}
+          </b>
+          <fa-icon [class]="socialItem.classes" [icon]="socialItem.icon"></fa-icon>
+        </h3>
+        <mat-list>
+          <mat-list-item *ngFor="let site of socialItem.sites">
+            <span class="fs-5" matListItemTitle>{{site.name}}</span>
+            <span
+              class="text-primary cursor-pointer fs-6"
+              matListItemLine
+              *ngFor="let url of site.urls"
+              (click)="onSocialMedialClick(url)"
+            >
+            <a>
+              {{url}}
+            </a>
+          </span>
+          </mat-list-item>
+        </mat-list>
       </div>
+
+      <p class="fs-4 mt-5">
+        Recopilado por: <a
+        class="text-primary cursor-pointer"
+        (click)="onSocialMedialClick('https://www.facebook.com/profile.php?id=100079475621515')"
+      >Bint Bellahouel Al-Jazaairiy</a>
+      </p>
+    </div>
   </div>
 </div>
