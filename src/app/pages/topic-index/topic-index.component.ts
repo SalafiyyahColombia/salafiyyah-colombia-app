@@ -10,6 +10,8 @@ import {MatChipSelectionChange} from "@angular/material/chips";
 export class TopicIndexComponent {
   topics: Array<TopicInterface> = [];
   filteredTopics: Array<TopicInterface> = [];
+  searchText: string = '';
+  timer: any;
   categories: string[] = [
     'Conceptos básicos',
     'Creencia',
@@ -218,5 +220,29 @@ export class TopicIndexComponent {
     } else {
       this.filteredTopics = [...this.topics];
     }
+  }
+
+  onSearchInput(event: any) {
+    // Clear previous timeout
+    clearTimeout(this.timer);
+
+    // Get search text from input event
+    this.searchText = event.target.value.trim();
+
+    // Set a new timeout for debounce
+    this.timer = setTimeout(() => {
+      this.filterData();
+    }, 300); // Adjust the delay time (in milliseconds) as needed
+  }
+
+  filterData() {
+    if (!this.searchText) {
+      this.filteredTopics = this.topics;
+      return;
+    }
+
+    this.filteredTopics = this.topics.filter(item =>
+      item.title.toLowerCase().includes(this.searchText.toLowerCase())
+    );
   }
 }
