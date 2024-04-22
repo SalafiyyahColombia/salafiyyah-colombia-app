@@ -1,10 +1,19 @@
-<div class="row">
+<div class="row bg-white">
   <div class="col-12">
-    <div class="container text-center">
-      <h1 class="fs-1 mt-5">Sitio en construcción</h1>
-      <p class="message fs-3">Lo sentimos en este momento esta pagina esta siendo desarrollada.</p>
-      <p class="contact-info fs-5">Para suferencias por favor contactarnos en: <a href="mailto:salafiyyahColombia@gmail.com">salafiyyahColombia@gmail.com</a>.</p>
-      <img src="./assets/images/under-construction.png" alt="Construction Logo" class="img-fluid ">
+    <h1 class="fs-1 text-center mt-5 ">Siguenos en nuestras redes sociales!</h1>
+
+    <div class="row px-5 mt-5 pb-5">
+      <div class="col pb-5" *ngFor="let item of socialMediaItems">
+        <mat-card class="text-center d-flex justify-content-center rounded-2 mt-5">
+          <mat-card-header class="justify-content-center">
+            <mat-card-title class="fs-4">{{item.socialMediaName}}</mat-card-title>
+          </mat-card-header>
+          <fa-icon size="3x" [class]="item.style" [icon]="item.icon"></fa-icon>
+          <mat-card-actions>
+            <button mat-button class="card-button bg-success text-white" type="button" (click)="onSocialMedialClick(item.url)">Ir ahora!</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
     </div>
   </div>
 </div>

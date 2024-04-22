@@ -80,6 +80,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   .mat-drawer-content {
     width: 100%;
+    overflow: hidden;
   }
 
   .mat-drawer-inner-container {
