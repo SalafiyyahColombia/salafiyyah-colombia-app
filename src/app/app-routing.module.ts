@@ -9,6 +9,7 @@ import {TrustableSourcesComponent} from "./pages/thrustable-sources/thrustable-s
 import {TopicIndexComponent} from "./pages/topic-index/topic-index.component";
 import {ContactUsComponent} from "./pages/contact-us/contact-us.component";
 import {AboutUsComponent} from "./pages/about-us/about-us.component";
+import {VideosComponent} from "./pages/videos/videos.component";
 
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
       {path: 'topic-index', component: TopicIndexComponent},
       {path: 'contact-us', component: ContactUsComponent},
       {path: 'about-us', component: AboutUsComponent},
+      {path: 'videos', component: VideosComponent},
       {path: '', pathMatch: 'full', redirectTo: 'topic-index'},
     ]
   },

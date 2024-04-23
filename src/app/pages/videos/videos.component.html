@@ -1,0 +1,29 @@
+<div class="row bg-white">
+  <div class="col-12">
+    <div class="container">
+      <h1 class="fs-1 mt-5">Videos</h1>
+    </div>
+  </div>
+
+  <div class="col-12 mt-3" *ngFor="let playlist of playlists;">
+    <div class="container">
+      <div class="row">
+        <div class="col-3 p-3" *ngFor="let video of playlist.items;">
+          <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>
+                {{video.snippet.title}}
+              </mat-card-title>
+            </mat-card-header>
+            <img mat-card-image [src]="video.snippet.thumbnails.standard.url" alt="">
+            <mat-card-content>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button class="bg-success text-white w-100" (click)="onButtonClick(video.contentDetails.videoId)">VER</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

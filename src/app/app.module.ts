@@ -22,6 +22,8 @@ import {RouterModule} from "@angular/router";
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { VideosComponent } from './pages/videos/videos.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -37,11 +39,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FooterComponent,
     SidebarComponent,
     ContactUsComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    VideosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,

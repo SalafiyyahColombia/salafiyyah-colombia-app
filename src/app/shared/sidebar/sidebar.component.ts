@@ -22,8 +22,9 @@ export class SidebarComponent implements AfterViewInit {
 
   navLinks: SidebarListInterface[] = [
     {text: 'Quienes somos', url: 'about-us'},
-    {text: 'Indice de temas', url: 'topic-index'},
     {text: 'Sitios confiables', url: 'trustable-sources'},
+    {text: 'Indice de temas', url: 'topic-index'},
+    {text: 'Videos', url: 'videos'},
     {text: 'Contáctenos', url: 'contact-us'},
   ];
 }
