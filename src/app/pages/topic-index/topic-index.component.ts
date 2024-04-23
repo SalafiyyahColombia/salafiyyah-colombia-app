@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {TopicInterface} from "../../Interfaces/topic.interface";
 import {MatChipSelectionChange} from "@angular/material/chips";
+import {BloggerService} from "../../services/blogger.service";
 
 @Component({
   selector: 'app-topic-index',
@@ -8,6 +9,7 @@ import {MatChipSelectionChange} from "@angular/material/chips";
   styleUrls: ['./topic-index.component.scss']
 })
 export class TopicIndexComponent {
+  bloggerService: BloggerService = inject(BloggerService);
   topics: Array<TopicInterface> = [];
   filteredTopics: Array<TopicInterface> = [];
   searchText: string = '';
@@ -208,6 +210,9 @@ export class TopicIndexComponent {
       },
     ]
     this.filteredTopics = [...this.topics];
+    this.bloggerService.getBlogData().subscribe((data => {
+      console.log(data)
+    }))
   }
 
   onCardClick(url: string): void {

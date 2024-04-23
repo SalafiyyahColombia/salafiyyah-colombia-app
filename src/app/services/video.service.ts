@@ -22,6 +22,8 @@ export class VideoService {
       'PLUeVBUUlLlK8pkigYJqQKo1Nq-RaDexrJ&si=3PYKasDc1bge_R6n',
       'PL88r_AV4Epknyllz6t7yTkVGmlILzh8jx&si=_51LvjU9tKXqq1t7',
       'PLX50sh_ZbgprKi9UR5a3cVyVQanHxHpo_&si=sVF6gcVuR2rX_BlD',
+      'PLX50sh_ZbgpqT70j8tWjp_VMheTfHZtsU&si=Pu4NwqKoXLs3dhPn',
+      'PLoB1iIfGWtBIZJZWm2uBYdwKeOIzOD2OD&si=7ZimPf_NTLKyyUgd',
     ];
     let playListItemUrl = `https://www.googleapis.com/youtube/v3/playlistItems?key=${this.youtubeKey}&part=snippet,contentDetails&maxResults=50`;
 

@@ -48,6 +48,10 @@ export class TrustableSourcesComponent {
             urls: ['https://youtube.com/@Minhaj_alsalaf']
           },
           {
+            name: 'Kitab wa Sunnah Videos>',
+            urls: ['https://www.youtube.com/@KitabwaSunnahVideos/']
+          },
+          {
             name: 'As-Salafiyyah Colombia:',
             urls: ['https://youtube.com/@salafiyyahcolombia']
           },
