@@ -16,7 +16,9 @@
               </mat-card-title>
             </mat-card-header>
             <img mat-card-image [src]="video.snippet.thumbnails.standard.url" alt="">
-            <mat-card-content>
+            <mat-card-content class="py-2">
+              <p>Canal: {{video.snippet.channelTitle}}</p>
+              <span class="fst-italic">Fecha de publicación: {{video.snippet.publishedAt | date}}</span>
             </mat-card-content>
             <mat-card-actions>
               <button mat-button class="bg-success text-white w-100" (click)="onButtonClick(video.contentDetails.videoId)">VER</button>

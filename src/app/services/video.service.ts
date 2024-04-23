@@ -17,8 +17,11 @@ export class VideoService {
       'PLUeVBUUlLlK9MSL5jtKHRD90tgZdyNBQ9',
       'PLUeVBUUlLlK_FbooN9ZEyxUnVP1hRlbpC&si=n6dke_55rP267jyy',
       'PLUeVBUUlLlK8PgEeZyekMcp-MlalZKdEk&si=eQPR1jEIyXAELQlf',
+      'PLfjw44efNv1wBbNmRC7qBsCKAJ8AoK8hQ&si=xrz6k0oZYKTXPVOu',
+      'PL88r_AV4EpklgjniNijIAwf-NwU3WJAMQ&si=CZgkw7EnfqhHXQPS',
       'PLUeVBUUlLlK8pkigYJqQKo1Nq-RaDexrJ&si=3PYKasDc1bge_R6n',
-      'PLUeVBUUlLlK98tEohnk7neXvi0-NKxkmr&si=h145Ue9eXd6Q-g0V',
+      'PL88r_AV4Epknyllz6t7yTkVGmlILzh8jx&si=_51LvjU9tKXqq1t7',
+      'PLX50sh_ZbgprKi9UR5a3cVyVQanHxHpo_&si=sVF6gcVuR2rX_BlD',
     ];
     let playListItemUrl = `https://www.googleapis.com/youtube/v3/playlistItems?key=${this.youtubeKey}&part=snippet,contentDetails&maxResults=50`;
 
