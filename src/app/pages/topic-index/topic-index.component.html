@@ -58,9 +58,22 @@
     <mat-card class="example-card">
       <mat-card-header>
         <mat-card-title class="title">{{post.title}}</mat-card-title>
-        <mat-card-subtitle>Publicado: {{post.published | date}}</mat-card-subtitle>
       </mat-card-header>
-      <img mat-card-image class="card-img" [src]="post.images[0].url" alt="Photo of a Shiba Inu">
+      <img mat-card-image class="card-img" [src]="post.images[0].url" alt="">
+      <mat-card-content class="d-flex flex-grow-1 flex-column">
+        <mat-chip-listbox class="mt-2">
+          <mat-chip-option
+            color="warn"
+            *ngFor="let label of post.labels"
+            [disabled]="true"
+          >
+            {{ label }}
+          </mat-chip-option>
+        </mat-chip-listbox>
+        <p class="mt-auto fst-italic">
+          Publicado: {{post.published | date}}
+        </p>
+      </mat-card-content>
       <mat-card-actions>
         <button
           type="button"
