@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +24,9 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { VideosComponent } from './pages/videos/videos.component';
 import {HttpClientModule} from "@angular/common/http";
+import localeEs from '@angular/common/locales/es';
+import {registerLocaleData} from "@angular/common";
+registerLocaleData(localeEs, 'es');
 
 @NgModule({
   declarations: [
@@ -54,7 +57,9 @@ import {HttpClientModule} from "@angular/common/http";
     TranslateModule.forRoot(),
     FontAwesomeModule,
   ],
-  providers: [],
+  providers: [
+    {provide: LOCALE_ID, useValue: 'es'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

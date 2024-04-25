@@ -1,6 +1,6 @@
 <div class="row pb-5">
   <div class="col-12 mt-5 px-4">
-    <h1>Categorías</h1>
+    <h1>Indice de temas</h1>
     <mat-chip-listbox>
       <mat-chip-option
         *ngFor="let category of categories"
@@ -24,7 +24,7 @@
     </mat-form-field>
   </div>
 
-  <div class="col-sm-12 col-md-12 col-lg-4 p-3 px-4 animate__animated animate__fadeIn" *ngFor="let topic of filteredTopics">
+  <!--<div class="col-sm-12 col-md-12 col-lg-4 p-3 px-4 animate__animated animate__fadeIn" *ngFor="let topic of filteredTopics">
     <mat-card class="card">
       <mat-card-header>
         <mat-card-title>{{ topic.title }}</mat-card-title>
@@ -52,5 +52,26 @@
         </button>
       </mat-card-actions>
     </mat-card>
+  </div>-->
+
+  <div class="col-sm-12 col-md-12 col-lg-4 p-3 px-4 animate__animated animate__fadeIn" *ngFor="let post of filteredPostList">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title class="title">{{post.title}}</mat-card-title>
+        <mat-card-subtitle>Publicado: {{post.published | date}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image class="card-img" [src]="post.images[0].url" alt="Photo of a Shiba Inu">
+      <mat-card-actions>
+        <button
+          type="button"
+          (click)="onCardClick(post.url)"
+          mat-button
+          class="bg-success text-white card-button"
+        >
+          Ir a la publicación
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
   </div>
 </div>
