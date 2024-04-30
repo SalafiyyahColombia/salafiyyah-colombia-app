@@ -23,7 +23,7 @@ export class AboutUsComponent {
       {icon: this.faInstagram, url: 'https://www.instagram.com/salafiyyah_colombia/', style: 'text-danger'},
       {icon: this.faTelegram, url: 'https://t.me/salafiyyahcolombia', style: 'text-info'},
       {icon: this.faThreads, url: 'https://www.threads.net/@salafiyyah_colombia', style: 'text-black'},
-      {icon: this.faWhatsapp, url: '', style: 'text-success'},
+      {icon: this.faWhatsapp, url: 'https://wa.me/+573216081336', style: 'text-success'},
       {icon: this.faMapPin, url: 'https://maps.app.goo.gl/ZuyqYwQeFVonZFRn7', style: 'text-danger'},
       {icon: this.faYoutube, url: 'https://www.youtube.com/channel/UCy3V2DPyTmwedEr0soDv-7A', style: 'text-danger'},
     ];

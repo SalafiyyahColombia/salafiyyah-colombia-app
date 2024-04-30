@@ -8,6 +8,19 @@
   <div class="col-12 mt-3 pb-5" *ngFor="let playlist of playlists;">
     <div class="container">
       <div class="row">
+        <div class="col-12">
+          <h2 class="mt-3">Buscar</h2>
+          <mat-form-field>
+            <mat-icon matPrefix>search</mat-icon>
+            <input
+              matInput
+              type="search"
+              placeholder="Busque aquí por titulo"
+              class="search-input"
+              (input)="onSearchInput($event)"
+            >
+          </mat-form-field>
+        </div>
         <div class="col-lg-3 col-md-12 col-sm-12 p-3 animate__animated animate__fadeIn" *ngFor="let video of playlist.items;">
           <mat-card class="example-card">
             <mat-card-header>

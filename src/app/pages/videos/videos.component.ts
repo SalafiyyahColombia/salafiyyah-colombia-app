@@ -8,6 +8,8 @@ import {YoutubePlaylistInterface} from "../../Interfaces/youtube-playlist.interf
   styleUrls: ['./videos.component.scss']
 })
 export class VideosComponent {
+  timer: any;
+  searchText: string = '';
   categories: string[] = [
     'Conceptos básicos',
     'Creencia',
@@ -27,13 +29,38 @@ export class VideosComponent {
   ];
   videoService: VideoService = inject(VideoService);
   playlists: YoutubePlaylistInterface[] = [];
+  filteredPlaylist: YoutubePlaylistInterface[] = [];
 
   constructor() {
 
     this.videoService.getPlaylist().subscribe((data => {
-      console.log(data)
       this.playlists = data;
+      this.filteredPlaylist = this.playlists;
     }))
+  }
+
+  onSearchInput(event: any): void {
+    // Clear previous timeout
+    clearTimeout(this.timer);
+
+    // Get search text from input event
+    this.searchText = event.target.value.trim();
+
+    // Set a new timeout for debounce
+    this.timer = setTimeout(() => {
+      this.filterData();
+    }, 300); // Adjust the delay
+  }
+
+  filterData(): void {
+    if (!this.searchText) {
+      this.filteredPlaylist = this.playlists;
+      return;
+    }
+
+    /*this.filteredPlaylist = this.playlists.filter((item: YoutubePlaylistInterface) =>
+      item.title.toLowerCase().includes(this.searchText.toLowerCase())
+    );*/
   }
 
   onButtonClick(id: string) {

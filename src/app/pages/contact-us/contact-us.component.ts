@@ -25,7 +25,7 @@ export class ContactUsComponent {
       {socialMediaName: 'Threads', icon: this.faThreads, url: 'https://www.threads.net/@salafiyyah_colombia', style: 'text-black mt-5'},
       {socialMediaName: 'Youtube', icon: this.faYoutube, url: 'https://www.youtube.com/channel/UCy3V2DPyTmwedEr0soDv-7A', style: 'text-danger mt-5'},
       {socialMediaName: 'Mezquita', icon: this.faMapPin, url: 'https://maps.app.goo.gl/ZuyqYwQeFVonZFRn7', style: 'text-danger mt-5'},
-      // {socialMediaName: 'Whatsapp', icon: this.faWhatsapp, url: '', style: 'text-success mt-5'},
+      {socialMediaName: 'Whatsapp', icon: this.faWhatsapp, url: 'https://wa.me/+573216081336', style: 'text-success mt-5'},
     ];
   }
 
