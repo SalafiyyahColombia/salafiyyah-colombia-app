@@ -23,7 +23,7 @@ const routes: Routes = [
       {path: 'contact-us', component: ContactUsComponent},
       {path: 'about-us', component: AboutUsComponent},
       {path: 'videos', component: VideosComponent},
-      {path: 'pdf', component: PdfComponent},
+      // {path: 'pdf', component: PdfComponent},
       {path: '', pathMatch: 'full', redirectTo: 'topic-index'},
     ]
   },
