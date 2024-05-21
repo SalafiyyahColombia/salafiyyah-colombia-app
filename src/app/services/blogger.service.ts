@@ -1,15 +1,15 @@
 import {inject, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {environment} from "../../environments/environment";
 import {Observable} from "rxjs";
 import {BloggerResponseInterface} from "../Interfaces/blogger-response.interface";
+import {environment} from "../../environments/environment.development";
 
 @Injectable({
   providedIn: 'root'
 })
 export class BloggerService {
   httpClient: HttpClient = inject(HttpClient);
-  apiKey = environment.youtubeKey;
+  apiKey = environment.googleApiKey;
   private apiUrl: string = 'https://www.googleapis.com/blogger/v3/blogs';
   private salafiyyahColombiaBlogId: string = '942962238894202923';
   constructor() { }

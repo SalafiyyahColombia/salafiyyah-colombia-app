@@ -57,10 +57,13 @@ export class VideosComponent {
       this.filteredPlaylist = this.playlists;
       return;
     }
-
-    /*this.filteredPlaylist = this.playlists.filter((item: YoutubePlaylistInterface) =>
-      item.title.toLowerCase().includes(this.searchText.toLowerCase())
-    );*/
+    this.filteredPlaylist = this.playlists.map((item: YoutubePlaylistInterface) => {
+      return {
+        ...item,
+        items: item.items.filter(el => el.snippet.title.toLowerCase().includes(this.searchText.toLowerCase()))
+      };
+    }).filter(item => item.items.length > 0);
+    console.log(this.filteredPlaylist)
   }
 
   onButtonClick(id: string) {

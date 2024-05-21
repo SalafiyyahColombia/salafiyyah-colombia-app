@@ -26,6 +26,7 @@ import { VideosComponent } from './pages/videos/videos.component';
 import {HttpClientModule} from "@angular/common/http";
 import localeEs from '@angular/common/locales/es';
 import {registerLocaleData} from "@angular/common";
+import { PdfComponent } from './pages/pdf/pdf.component';
 registerLocaleData(localeEs, 'es');
 
 @NgModule({
@@ -43,7 +44,8 @@ registerLocaleData(localeEs, 'es');
     SidebarComponent,
     ContactUsComponent,
     AboutUsComponent,
-    VideosComponent
+    VideosComponent,
+    PdfComponent
   ],
   imports: [
     BrowserModule,

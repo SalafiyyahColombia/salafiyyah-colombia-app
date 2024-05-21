@@ -10,6 +10,7 @@ import {TopicIndexComponent} from "./pages/topic-index/topic-index.component";
 import {ContactUsComponent} from "./pages/contact-us/contact-us.component";
 import {AboutUsComponent} from "./pages/about-us/about-us.component";
 import {VideosComponent} from "./pages/videos/videos.component";
+import {PdfComponent} from "./pages/pdf/pdf.component";
 
 const routes: Routes = [
   {
@@ -22,6 +23,7 @@ const routes: Routes = [
       {path: 'contact-us', component: ContactUsComponent},
       {path: 'about-us', component: AboutUsComponent},
       {path: 'videos', component: VideosComponent},
+      {path: 'pdf', component: PdfComponent},
       {path: '', pathMatch: 'full', redirectTo: 'topic-index'},
     ]
   },
