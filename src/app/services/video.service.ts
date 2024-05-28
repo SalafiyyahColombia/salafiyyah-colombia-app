@@ -14,16 +14,14 @@ export class VideoService {
 
   getPlaylist() {
     const playlist = [
-      'PLUeVBUUlLlK9MSL5jtKHRD90tgZdyNBQ9',
-      'PLUeVBUUlLlK_FbooN9ZEyxUnVP1hRlbpC&si=n6dke_55rP267jyy',
-      'PLUeVBUUlLlK8PgEeZyekMcp-MlalZKdEk&si=eQPR1jEIyXAELQlf',
-      'PLfjw44efNv1wBbNmRC7qBsCKAJ8AoK8hQ&si=xrz6k0oZYKTXPVOu',
-      'PL88r_AV4EpklgjniNijIAwf-NwU3WJAMQ&si=CZgkw7EnfqhHXQPS',
-      'PLUeVBUUlLlK8pkigYJqQKo1Nq-RaDexrJ&si=3PYKasDc1bge_R6n',
-      'PL88r_AV4Epknyllz6t7yTkVGmlILzh8jx&si=_51LvjU9tKXqq1t7',
-      'PLX50sh_ZbgprKi9UR5a3cVyVQanHxHpo_&si=sVF6gcVuR2rX_BlD',
-      'PLX50sh_ZbgpqT70j8tWjp_VMheTfHZtsU&si=Pu4NwqKoXLs3dhPn',
-      'PLoB1iIfGWtBIZJZWm2uBYdwKeOIzOD2OD&si=7ZimPf_NTLKyyUgd',
+      'PLUeVBUUlLlK9MSL5jtKHRD90tgZdyNBQ9', // Sunnah audios Fundamentos de la Creencia de Ahlus-Sunnah wal-Yama'ah
+      'PLUeVBUUlLlK_FbooN9ZEyxUnVP1hRlbpC&si=n6dke_55rP267jyy', // Sunnah audios Los Cuatro Principios
+      'PLUeVBUUlLlK8PgEeZyekMcp-MlalZKdEk&si=eQPR1jEIyXAELQlf', // Sunnah audios  Las Condiciones de la Oración, sus Pilares y sus Obligaciones
+      'PLfjw44efNv1wBbNmRC7qBsCKAJ8AoK8hQ&si=xrz6k0oZYKTXPVOu', // MPUBS Los Invalidantes del Islam
+      'PL88r_AV4EpklGSKC4EZ6n56Z5EaU7KGHH&si=XYawglktYZLtRTOd', // Salafiyyah Colombia Todos
+      'PLUeVBUUlLlK8pkigYJqQKo1Nq-RaDexrJ&si=3PYKasDc1bge_R6n', // Sunnah Audios Los Invalidantes del Islam
+      'PLX50sh_ZbgpqT70j8tWjp_VMheTfHZtsU&si=T_bl_rZcuJB1MuZP', // Manhaj al-Salaf Mujer
+      'PLoB1iIfGWtBJbwSuNAGGgbj_eVqP8NnjO&si=nQyRJ846vLpQb-Se', // Kitab Wa sunnah TOdos
     ];
     let playListItemUrl = `https://www.googleapis.com/youtube/v3/playlistItems?key=${this.youtubeKey}&part=snippet,contentDetails&maxResults=50`;
 
