@@ -24,7 +24,8 @@ export class SidebarComponent implements AfterViewInit {
     {text: 'Quienes somos', url: 'about-us'},
     {text: 'Sitios confiables', url: 'trustable-sources'},
     {text: 'Indice de temas', url: 'topic-index'},
-    {text: 'Descargar PDfs', url: 'pdf'},
+
+    // {text: 'Descargar PDFs', url: 'pdf'},
     {text: 'Videos', url: 'videos'},
     {text: 'Contáctenos', url: 'contact-us'},
   ];
