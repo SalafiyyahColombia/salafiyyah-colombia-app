@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { faMapPin} from '@fortawesome/free-solid-svg-icons';
-import {faFacebook, faInstagram, faTelegram, faThreads, faWhatsapp, faYoutube,IconDefinition} from '@fortawesome/free-brands-svg-icons';
+import {faFacebook, faInstagram, faTelegram, faThreads, faWhatsapp, faYoutube, faPaypal ,IconDefinition} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-contact-us',
@@ -15,6 +15,7 @@ export class ContactUsComponent {
   faWhatsapp: IconDefinition = faWhatsapp;
   faMapPin: IconDefinition = faMapPin;
   faYoutube: IconDefinition = faYoutube;
+  faPaypal: IconDefinition = faPaypal;
   socialMediaItems:  Array<any> = [];
 
   constructor() {
@@ -26,6 +27,7 @@ export class ContactUsComponent {
       {socialMediaName: 'Youtube', icon: this.faYoutube, url: 'https://www.youtube.com/channel/UCy3V2DPyTmwedEr0soDv-7A', style: 'text-danger mt-5'},
       {socialMediaName: 'Mezquita', icon: this.faMapPin, url: 'https://maps.app.goo.gl/ZuyqYwQeFVonZFRn7', style: 'text-danger mt-5'},
       {socialMediaName: 'Whatsapp', icon: this.faWhatsapp, url: 'https://wa.me/+573216081336', style: 'text-success mt-5'},
+      {socialMediaName: 'Donar', icon: this.faPaypal, url: 'https://www.paypal.com/donate/?hosted_button_id=ZYZTCXVDRE9VA', style: 'text-primary mt-5'},
     ];
   }
 
