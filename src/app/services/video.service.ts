@@ -14,6 +14,7 @@ export class VideoService {
 
   getPlaylist() {
     const playlist = [
+      'https://youtube.com/playlist?list=PL88r_AV4EpknmsWdhTpmLW900t1MBa2Bo&si=5PMpOogwjWC9Biek', // Los seis principios (del Din)
       'PLUeVBUUlLlK9MSL5jtKHRD90tgZdyNBQ9', // Sunnah audios Fundamentos de la Creencia de Ahlus-Sunnah wal-Yama'ah
       'PLUeVBUUlLlK_FbooN9ZEyxUnVP1hRlbpC&si=n6dke_55rP267jyy', // Sunnah audios Los Cuatro Principios
       'PLUeVBUUlLlK8PgEeZyekMcp-MlalZKdEk&si=eQPR1jEIyXAELQlf', // Sunnah audios  Las Condiciones de la Oración, sus Pilares y sus Obligaciones
