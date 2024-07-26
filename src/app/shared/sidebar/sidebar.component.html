@@ -9,6 +9,13 @@
       >
         {{link.text}}
       </mat-list-item>
+      <mat-list-item
+        role="listitem"
+        (click)="drawer.close(); navigate('https://www.paypal.com/donate/?hosted_button_id=ZYZTCXVDRE9VA')"
+
+      >
+        Donar
+      </mat-list-item>
     </mat-list>
   </mat-drawer>
   <mat-drawer-content>

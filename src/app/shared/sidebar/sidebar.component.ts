@@ -29,4 +29,8 @@ export class SidebarComponent implements AfterViewInit {
     {text: 'Videos', url: 'videos'},
     {text: 'Contáctenos', url: 'contact-us'},
   ];
+
+  navigate(baseUrl: string) {
+    window.location.href = baseUrl;
+  }
 }
